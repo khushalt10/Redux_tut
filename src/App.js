@@ -1,17 +1,57 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Counter } from './features/counter/Counter';
+import Login from './features/user/Login'
 import './App.css';
-import Login from './Login';
-import { useStateValue } from './StateProvider';
 
 function App() {
-
-  const [{user}, dispatch] = useStateValue();
-
   return (
-    <div className="app">
-      <h1>Hello Wolrd</h1>
-      <h3>{user ? `The user logged in is ${user}` : 'No user is logged in' }</h3>
+    <div className="App">
+
       <Login />
+
+      <header className="App-header">
+        <Counter />
+        <p>
+        </p>
+        <span>
+          <span>Learn </span>
+          <a
+            className="App-link"
+            href="https://reactjs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            React
+          </a>
+          <span>, </span>
+          <a
+            className="App-link"
+            href="https://redux.js.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Redux
+          </a>
+          <span>, </span>
+          <a
+            className="App-link"
+            href="https://redux-toolkit.js.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Redux Toolkit
+          </a>
+          ,<span> and </span>
+          <a
+            className="App-link"
+            href="https://react-redux.js.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            React Redux
+          </a>
+        </span>
+      </header>
     </div>
   );
 }
